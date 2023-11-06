@@ -1,0 +1,54 @@
+The add_integer function
+========================
+
+This function returns the sum of two integers or floats
+It checks passed values to be int or float
+
+Importing add_integer as add
+----------------------------
+>>> add = __import__('0-add_integer').add_integer
+
+Tests
+=====
+Testing Exceptions
+------------------
+## Test case #1: Unsupported type complex number
+
+>>> add(4, 6j)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+## Test case #2: String addition
+
+>>> add('a', 5)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+## Test case #3: Unassigned value
+>>> add(a, 65)
+Traceback (most recent call last):
+...
+NameError: name 'a' is not defined
+
+## Test case #4: Infinity values
+>>> add(456444e998885, 3)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
+
+Functional tests
+----------------
+## Test case #5: Adding positive integers
+>>> add(4, 6)
+10
+
+## Test case #6: Adding negative and positive
+>>> add(-10, 12)
+2
+
+## Test case #7: Adding negative numbers
+>>> add(-10, -4)
+-14

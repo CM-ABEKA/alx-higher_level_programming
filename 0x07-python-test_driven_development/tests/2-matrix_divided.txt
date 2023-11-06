@@ -1,0 +1,64 @@
+Function that divides elements of a matrix
+=========================================
+
+Usage: matrix_divided(matrix, div)
+@matrix: the matrix
+@div: the number float or integer to divide with
+
+Import
+======
+---- matrix_divided() imported as matrix() ---
+-
+>>> matrix = __import__('2-matrix_divided').matrix_divided
+
+Tests
+=====
+Argument Checks
+---------------
+
+## Test case #1: integer as matrix
+>>> matrix(2, 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+## Test case #2: list of mixed values
+>>> mixedMatrix = [['a', 3], [2, 2]]
+>>> matrix(mixedMatrix, 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+## Test case #3: div not integer or float
+>>> mx = [[2, 3], [4, 5]]
+>>> matrix(mx, 'b')
+Traceback (most recent call last):
+TypeError: div must be a number
+
+## Test case #4: div NameError not defined
+>>> matrix(mx, a)
+Traceback (most recent call last):
+NameError: name 'a' is not defined
+
+## Test case #5: div is 0
+>>> matrix(mx, 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+## Test case #6: matrix row must be same size
+>>> mx_bad_row = [[2, 3], [3, 4, 5]]
+>>> matrix(mx_bad_row, 4)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+*****************************************************
+Functional Tests
+================
+## Test case #6: divide and round to 2 decimal places
+>>> matrix(mx, 3)
+[[0.67, 1.0], [1.33, 1.67]]
+
+## Test case #7: empty matrix
+>>> mx = [[]]
+>>> matrix(mx, 2)
+[[]]
+
