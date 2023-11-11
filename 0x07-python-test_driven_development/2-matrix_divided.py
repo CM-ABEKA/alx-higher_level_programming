@@ -4,7 +4,7 @@
 
 def matrix_divided(matrix, div):
     '''
-        matrix_divided  
+        matrix_divided
         ==============
 
         divides elements in matrix with div
@@ -15,7 +15,7 @@ def matrix_divided(matrix, div):
             -- The values must be integers or floats
             @div: the value to divide with
             -- Must be and integer or float
-            -- The division is rounded off to 
+            -- The division is rounded off to
              decimal places.
         Returns:
             -- The result is returned in a new matrix.
