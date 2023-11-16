@@ -1,9 +1,3 @@
-'''
-Base class for models
-'''
-
-
-#!/usr/bin/python3
 """Base model module"""
 import json
 
@@ -26,7 +20,10 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """Convert to list of dictionaries"""
-        return json.loads(json_string) if json_string and json_string != "[]" else []
+        if json_string and json_string != "[]":
+            return json.loads(json_string)
+        else:
+            return []
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -54,4 +51,3 @@ class Base:
             return []
         lst_dic = cls.from_json_string(lst_item)
         return [cls.create(**ele) for ele in lst_dic]
-
