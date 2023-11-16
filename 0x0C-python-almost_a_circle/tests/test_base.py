@@ -106,4 +106,7 @@ class TestBaseClass(unittest.TestCase):
         loaded_objects = Rectangle.load_from_file()
 
         self.assertEqual(str(objects[0]), str(loaded_objects[0]))
-        self.assertEqual(str(objects[1
+        self.assertEqual(str(objects[1]), str(loaded_objects[1]))
+
+if __name__ == '__main__':
+    unittest.main()
