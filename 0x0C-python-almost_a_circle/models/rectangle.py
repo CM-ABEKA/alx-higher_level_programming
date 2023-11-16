@@ -93,17 +93,12 @@ class Rectangle(Base):
             "y": self.y
         }
 
-
-
     def validate_positive_integer(self, name, value):
         """Validate that the value is a positive integer."""
         if not isinstance(value, int):
             raise TypeError(f"{name} must be an integer")
         elif value <= 0:
             raise ValueError(f"{name} must be a positive integer")
-
-
-
 
     def validate_non_negative_integer(self, name, value):
         """Validate that the value is a non-negative integer"""

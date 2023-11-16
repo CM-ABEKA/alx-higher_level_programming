@@ -20,10 +20,8 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """Convert to list of dictionaries"""
-        if json_string and json_string != "[]":
-            return json.loads(json_string)
-        else:
-            return []
+        return json.loads(json_string) if json_string\
+            and json_string != "[]" else []
 
     @classmethod
     def save_to_file(cls, list_objs):

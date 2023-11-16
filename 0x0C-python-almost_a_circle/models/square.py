@@ -4,7 +4,7 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Class sqr, for the class of square, has getters setters, 
+    """Class sqr, for the class of square, has getters setters,
     inherits from base>>rectangle"""
 
     def __init__(self, size, x=0, y=0, id=None):
@@ -62,7 +62,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """String representation"""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+        return "[Square] ({}) {}/{} - {}".\
+            format(self.id, self.x, self.y, self.width)
 
     def to_dictionary(self):
         """To dictionary"""
