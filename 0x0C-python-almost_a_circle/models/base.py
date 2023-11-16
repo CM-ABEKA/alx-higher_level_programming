@@ -1,3 +1,9 @@
+'''
+Base class for models
+'''
+
+
+#!/usr/bin/python3
 """Base model module"""
 import json
 
