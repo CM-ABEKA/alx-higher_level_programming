@@ -1,0 +1,21 @@
+>>> prt = __import__('4-print_square').print_square
+>>> prt(4)
+####
+####
+####
+####
+
+>>> prt(-1)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
+
+>>> prt(-0.123)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+>>> prt("")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
